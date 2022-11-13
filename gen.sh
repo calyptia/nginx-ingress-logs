@@ -1,7 +1,7 @@
 #!/bin/sh
 
 while true; do
-    n=`awk -v min=10 -v max=100 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'`
+    n=`awk -v min=5 -v max=20 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'`
     for var in `seq 1 $n`;
     do
 	ip1=`cat ./ip.txt | shuf -n 1`
