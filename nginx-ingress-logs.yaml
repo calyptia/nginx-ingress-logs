@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calyptia-nginx-ingress-logs
+  annotations:
+    fluentbit.io/parser: k8s-nginx-ingress
+spec:
+  containers:
+  - name: calyptia-nginx-ingress-logs
+    image: calyptia/nginx-ingress-logs:latest
+  terminationGracePeriodSeconds: 1
+
